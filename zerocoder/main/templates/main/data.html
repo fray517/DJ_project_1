@@ -1,0 +1,132 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Data - Zerocoder Project{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="bi bi-database"></i> Страница Data
+        </h1>
+        <div class="alert alert-info" role="alert">
+            <i class="bi bi-info-circle"></i> 
+            Это страница для работы с данными.
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-table"></i> Таблица данных
+                </h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Пользователи</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Записи</td>
+                            <td>1,234</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Транзакции</td>
+                            <td>5,678</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-graph-up"></i> Статистика
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Активные пользователи</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" 
+                             style="width: 75%" 
+                             aria-valuenow="75" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            75%
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Загрузка данных</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" 
+                             role="progressbar" 
+                             style="width: 60%" 
+                             aria-valuenow="60" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            60%
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Обработка запросов</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" 
+                             role="progressbar" 
+                             style="width: 90%" 
+                             aria-valuenow="90" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            90%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-list-ul"></i> Действия
+                </h5>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary me-2">
+                    <i class="bi bi-download"></i> Экспорт данных
+                </button>
+                <button type="button" class="btn btn-success me-2">
+                    <i class="bi bi-upload"></i> Импорт данных
+                </button>
+                <button type="button" class="btn btn-warning me-2">
+                    <i class="bi bi-arrow-clockwise"></i> Обновить
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Очистить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Test - Zerocoder Project{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="bi bi-flask"></i> Тестовая страница
+        </h1>
+        <div class="alert alert-warning" role="alert">
+            <i class="bi bi-exclamation-triangle"></i> 
+            Это тестовая страница для проверки функциональности.
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-4">
+        <div class="card border-primary">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-check-circle"></i> Тест 1
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Проверка базовой функциональности компонентов.
+                </p>
+                <button type="button" class="btn btn-primary">
+                    Запустить тест
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card border-success">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-check2-circle"></i> Тест 2
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Проверка взаимодействия с базой данных.
+                </p>
+                <button type="button" class="btn btn-success">
+                    Запустить тест
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card border-info">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-check-all"></i> Тест 3
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Проверка API и внешних сервисов.
+                </p>
+                <button type="button" class="btn btn-info">
+                    Запустить тест
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-terminal"></i> Результаты тестирования
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">
+                                <i class="bi bi-check-circle text-success"></i> 
+                                Тест подключения к БД
+                            </h6>
+                            <small class="text-success">Пройден</small>
+                        </div>
+                        <p class="mb-1">Успешное подключение к базе данных.</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">
+                                <i class="bi bi-check-circle text-success"></i> 
+                                Тест шаблонов
+                            </h6>
+                            <small class="text-success">Пройден</small>
+                        </div>
+                        <p class="mb-1">Все шаблоны загружаются корректно.</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">
+                                <i class="bi bi-x-circle text-danger"></i> 
+                                Тест API
+                            </h6>
+                            <small class="text-danger">Ожидает проверки</small>
+                        </div>
+                        <p class="mb-1">Требуется дополнительная настройка.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

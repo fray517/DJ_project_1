@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Главная страница - Zerocoder Project{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-primary text-white p-5 rounded mb-4">
+            <h1 class="display-4">
+                <i class="bi bi-house-door-fill"></i> Добро пожаловать!
+            </h1>
+            <p class="lead">
+                Это главная страница Django приложения Zerocoder Project.
+            </p>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+            <p>
+                Используйте навигационное меню для перехода между страницами.
+            </p>
+            <a class="btn btn-light btn-lg" href="{% url 'about' %}" role="button">
+                <i class="bi bi-info-circle"></i> Узнать больше
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-house-door display-4 text-primary"></i>
+                <h5 class="card-title mt-3">Главная</h5>
+                <p class="card-text">
+                    Начальная страница приложения с основной информацией.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-database display-4 text-success"></i>
+                <h5 class="card-title mt-3">Data</h5>
+                <p class="card-text">
+                    Страница для работы с данными и их отображения.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-flask display-4 text-warning"></i>
+                <h5 class="card-title mt-3">Test</h5>
+                <p class="card-text">
+                    Тестовая страница для проверки функциональности.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-info-circle display-4 text-info"></i>
+                <h5 class="card-title mt-3">О нас</h5>
+                <p class="card-text">
+                    Информация о проекте и команде разработчиков.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

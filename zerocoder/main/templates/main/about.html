@@ -1,0 +1,127 @@
+{% extends 'main/base.html' %}
+
+{% block title %}О нас - Zerocoder Project{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="bi bi-info-circle"></i> О нас
+        </h1>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-8 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title mb-3">О проекте</h3>
+                <p class="card-text">
+                    Zerocoder Project — это современное веб-приложение, 
+                    разработанное с использованием Django и Bootstrap. 
+                    Проект демонстрирует лучшие практики веб-разработки 
+                    и современный подход к созданию пользовательских интерфейсов.
+                </p>
+                <p class="card-text">
+                    Мы стремимся создавать качественные решения, которые 
+                    упрощают работу пользователей и повышают эффективность 
+                    бизнес-процессов.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="bi bi-gear"></i> Технологии
+                </h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="bi bi-check-circle text-success"></i> Django 5.2
+                    </li>
+                    <li class="list-group-item">
+                        <i class="bi bi-check-circle text-success"></i> Bootstrap 5.3
+                    </li>
+                    <li class="list-group-item">
+                        <i class="bi bi-check-circle text-success"></i> Python 3.11
+                    </li>
+                    <li class="list-group-item">
+                        <i class="bi bi-check-circle text-success"></i> SQLite
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <i class="bi bi-lightning-charge display-4 text-warning"></i>
+                <h5 class="card-title mt-3">Быстро</h5>
+                <p class="card-text">
+                    Оптимизированная производительность и быстрая загрузка страниц.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <i class="bi bi-shield-check display-4 text-success"></i>
+                <h5 class="card-title mt-3">Безопасно</h5>
+                <p class="card-text">
+                    Современные методы защиты данных и безопасность на первом месте.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <i class="bi bi-phone display-4 text-primary"></i>
+                <h5 class="card-title mt-3">Адаптивно</h5>
+                <p class="card-text">
+                    Отличная работа на всех устройствах и размерах экранов.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-envelope"></i> Свяжитесь с нами
+                </h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" 
+                               placeholder="Введите ваше имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" 
+                               placeholder="Введите ваш email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="3" 
+                                  placeholder="Введите ваше сообщение"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-send"></i> Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,12 +1,17 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-# Create your views here.
+
 def index(request):
-    return HttpResponse("<h1>Это главная страница</h1>")
+    return render(request, "main/index.html")
+
 
 def data(request):
-    return HttpResponse("<h1>Это страница Data</h1>")
+    return render(request, "main/data.html")
+
 
 def test(request):
-    return HttpResponse("<h1>Это страница Test</h1>")
+    return render(request, "main/test.html")
+
+
+def about(request):
+    return render(request, "main/about.html")

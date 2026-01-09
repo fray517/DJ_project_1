@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <i class="bi bi-code-slash"></i> Zerocoder
+        </a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Переключить навигацию">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" 
+                       href="{% url 'index' %}">
+                        <i class="bi bi-house-door"></i> Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'data' %}active{% endif %}" 
+                       href="{% url 'data' %}">
+                        <i class="bi bi-database"></i> Data
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'test' %}active{% endif %}" 
+                       href="{% url 'test' %}">
+                        <i class="bi bi-flask"></i> Test
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" 
+                       href="{% url 'about' %}">
+                        <i class="bi bi-info-circle"></i> О нас
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
