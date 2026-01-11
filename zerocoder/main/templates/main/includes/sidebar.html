@@ -1,0 +1,39 @@
+<div class="offcanvas offcanvas-start sidebar d-lg-block" 
+     tabindex="-1" 
+     id="sidebarMenu" 
+     aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header d-lg-none">
+        <h5 class="offcanvas-title" id="sidebarMenuLabel">
+            <i class="bi bi-list"></i> Меню навигации
+        </h5>
+        <button type="button" 
+                class="btn-close" 
+                data-bs-dismiss="offcanvas" 
+                aria-label="Закрыть"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <nav class="nav flex-column">
+            <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" 
+               href="{% url 'index' %}">
+                <i class="bi bi-house-door"></i> Главная
+            </a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'data' %}active{% endif %}" 
+               href="{% url 'data' %}">
+                <i class="bi bi-database"></i> Data
+            </a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'test' %}active{% endif %}" 
+               href="{% url 'test' %}">
+                <i class="bi bi-flask"></i> Test
+            </a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" 
+               href="{% url 'about' %}">
+                <i class="bi bi-info-circle"></i> О нас
+            </a>
+            <hr class="my-2">
+            <a class="nav-link {% if request.resolver_match.url_name == 'news_home' %}active{% endif %}" 
+               href="{% url 'news_home' %}">
+                <i class="bi bi-newspaper"></i> Новости
+            </a>
+        </nav>
+    </div>
+</div>

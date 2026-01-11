@@ -1,7 +1,46 @@
 {% extends 'main/base.html' %}
 
-{% block title %}Новостная страница{% endblock %}
+{% block title %}Новости - Zerocoder Project{% endblock %}
 
 {% block content %}
-    <h1>Новостная страница</h1>
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">
+            <i class="bi bi-newspaper"></i> Новости
+        </h1>
+    </div>
+</div>
+
+{% if news %}
+    {% for new in news %}
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">{{ new.title }}</h5>
+                <small>
+                    <i class="bi bi-calendar"></i> 
+                    {{ new.pub_date|date:"d.m.Y H:i" }}
+                </small>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-text text-muted">
+                <strong>Краткое описание:</strong> {{ new.short_description }}
+            </p>
+            <hr>
+            <p class="card-text">{{ new.text }}</p>
+            <div class="mt-3">
+                <small class="text-muted">
+                    <i class="bi bi-person"></i> Автор: {{ new.users }}
+                </small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="alert alert-info" role="alert">
+        <i class="bi bi-info-circle"></i> 
+        Пока нет новостей. Зайдите позже!
+    </div>
+{% endif %}
 {% endblock %}
